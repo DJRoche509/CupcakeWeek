@@ -9,11 +9,19 @@ public class Main {
 
         // Create arrayList cupcakeMenu to hold Cupcake objects
         ArrayList <Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
+        // Create arrayList cupcakeMenu to hold Cupcake objects
+        ArrayList <Drink> drinkMenu = new ArrayList<Drink>() ;
+
 
         // Create instance objects of Cupcake, RedVelvet, Chocolate
         Cupcake cupcake = new Cupcake();
         RedVelvet redVelvet = new RedVelvet();
         Chocolate chocolate = new Chocolate();
+
+        // Create new instance objects of water, soda, milk
+        Drink water = new Drink();
+        Soda soda = new Soda();
+        Milk milk = new Milk();
 
         System.out.println("We are in the middle of creating the cupcake menu. We currently have three cupcakes on the menu but we need to decide on pricing.");
 
@@ -66,6 +74,60 @@ public class Main {
         cupcakeMenu.add(cupcake);
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
+
+        // Add each drink objects to the drinkMenu arrayList
+        drinkMenu.add(water);
+        drinkMenu.add(soda);
+        drinkMenu.add(milk);
+
+
+        /*   Water  */
+        System.out.println("We are in the middle of creating the drink menu. We currently have three drinks on the menu but we need to decide on pricing.");
+
+        System.out.println("We are deciding on the price for our standard drink. Here is the description:");
+
+        // Invoke water.type()
+        water.type();
+
+        System.out.println("How much would you like to charge for the water? (Input a numerical number taken to 2 decimal places)");
+        // Get user's input for price to be charged
+        priceText = input.nextLine();
+        // Convert priceText to the double variable, price
+        price = Double.parseDouble(priceText);
+        // Invoke cupcake instance object to set the price by passing "price" as parameter
+        water.setPrice(price) ;
+
+
+
+        /*   Soda  */
+        System.out.println("We are deciding on the price for our soda. Here is the description:");
+
+        // Invoke soda.type()
+        soda.type();
+
+        System.out.println("How much would you like to charge for the soda? (Input a numerical number taken to 2 decimal places)");
+        // Get user's input for price to be charged
+        priceText = input.nextLine();
+        // Convert priceText to the double variable, price
+        price = Double.parseDouble(priceText);
+        // Invoke cupcake instance object to set the price by passing "price" as parameter
+        soda.setPrice(price) ;
+
+
+
+        /*   Milk  */
+        System.out.println("We are deciding on the price for our milk. Here is the description:");
+
+        // Invoke soda.type()
+        milk.type();
+
+        System.out.println("How much would you like to charge for the milk? (Input a numerical number taken to 2 decimal places)");
+        // Get user's input for price to be charged
+        priceText = input.nextLine();
+        // Convert priceText to the double variable, price
+        price = Double.parseDouble(priceText);
+        // Invoke cupcake instance object to set the price by passing "price" as parameter
+        milk.setPrice(price) ;
     }
 }
 
@@ -101,3 +163,33 @@ class Chocolate extends Cupcake{
     }
 }
 
+
+class Drink {
+    public double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void type(){
+        System.out.println("A bottle of pure H2O");
+    }
+}
+
+class Soda extends Drink{
+    @Override
+    public void type() {
+        System.out.println("A bottle of Soda");
+    }
+}
+
+class Milk extends Drink{
+    @Override
+    public void type() {
+        System.out.println("A bottle of Milk");
+    }
+}

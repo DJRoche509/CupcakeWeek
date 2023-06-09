@@ -80,6 +80,8 @@ public class Main {
         drinkMenu.add(soda);
         drinkMenu.add(milk);
 
+        // Call the Order constructor and pass in cupcakeMenu and drinkMenu as parameters
+        new Order(cupcakeMenu, drinkMenu);
 
         /*   Water  */
         System.out.println("We are in the middle of creating the drink menu. We currently have three drinks on the menu but we need to decide on pricing.");
@@ -128,6 +130,8 @@ public class Main {
         price = Double.parseDouble(priceText);
         // Invoke cupcake instance object to set the price by passing "price" as parameter
         milk.setPrice(price) ;
+
+        //
     }
 }
 

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62de5bff-7e98-424c-ab0d-7a624f5915e6" name="Changes" comment="Initial commit of Order.java">
+    <list default="true" id="62de5bff-7e98-424c-ab0d-7a624f5915e6" name="Changes" comment="Implement Arraylist objects &amp; conditional statements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +29,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686270973812</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Invoke Order() object with cupcakeMenu &amp; drinkMenu">
+      <created>1686274945942</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686274945942</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implement Arraylist objects &amp; conditional statements">
+      <created>1686275255960</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686275255960</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +137,8 @@
     <MESSAGE value="Added Drink class and its inherited classes. Then, implement" />
     <MESSAGE value="Update file" />
     <MESSAGE value="Initial commit of Order.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit of Order.java" />
+    <MESSAGE value="Invoke Order() object with cupcakeMenu &amp; drinkMenu" />
+    <MESSAGE value="Implement Arraylist objects &amp; conditional statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Arraylist objects &amp; conditional statements" />
   </component>
 </project>

@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -15,6 +19,9 @@ public class Order {
 
         // Create an Arraylist of Objects and name it order
         ArrayList <Object> order = new ArrayList<Object>();
+
+        // Create double variable, subtotal and initialize it
+        double subtotal = 0.0;
 
         // Create boolean variable, ordering and Initialize it to true
         boolean ordering = true;
@@ -98,6 +105,92 @@ public class Order {
             if (!placeOrder.equalsIgnoreCase("y")) {
                 ordering = false;
             }
+        }
+
+        // Print out first and second item in the order ArrayList
+        System.out.println(order.get(0));
+        System.out.println(order.get(1));
+
+        for (int i = 2; i< order.size(); i++){
+            // Check if order at i is equal to cupcakeMenu at 0
+            if (order.get(i).equals(cupcakeMenu.get(0))){
+                // Print the type of cupcake at cupcakeMenu index 0
+                cupcakeMenu.get(0).type();
+                // Print the price of cupcake at cupcakeMenu index 0
+                System.out.println(cupcakeMenu.get(0).getPrice());
+                //Set subtotal equal to subtotal plus cupcakeMenu getPrice at 0
+                subtotal += cupcakeMenu.get(0).getPrice();
+            } else if (order.get(i).equals(cupcakeMenu.get(1))){
+                cupcakeMenu.get(1).type();
+                System.out.println(cupcakeMenu.get(1).getPrice());
+                subtotal += cupcakeMenu.get(1).getPrice();
+            }else if (order.get(i).equals(cupcakeMenu.get(2))){
+                cupcakeMenu.get(2).type();
+                System.out.println(cupcakeMenu.get(2).getPrice());
+                subtotal += cupcakeMenu.get(2).getPrice();
+            } else if (order.get(i).equals(drinkMenu.get(0))){
+                drinkMenu.get(0).type();
+                System.out.println(drinkMenu.get(0).getPrice());
+                subtotal += drinkMenu.get(0).getPrice();
+            } else if (order.get(i).equals(drinkMenu.get(1))){
+                drinkMenu.get(1).type();
+                System.out.println(drinkMenu.get(1).getPrice());
+                subtotal += drinkMenu.get(1).getPrice();
+            }else if (order.get(i).equals(drinkMenu.get(2))){
+                drinkMenu.get(2).type();
+                System.out.println(drinkMenu.get(2).getPrice());
+                subtotal += drinkMenu.get(2).getPrice();
+            }
+        }
+        // Print The subtotal
+        System.out.println(subtotal);
+
+        //Create a new CreateFile()
+        new CreateFile();
+        // Create a new WriteToFile() with param order
+        new WriteToFile(order);
+    }
+}
+
+class CreateFile{
+    public CreateFile(){
+        // Create a try catch block, with a catch parameter of IOException e
+        try {
+            //  create File object named salesData and set it equal to a new File object with the name “salesData.txt”
+            File salesData = new File("salesData.txt");
+            // Create if statement with param salesData.createNewFile()
+            // .createNewFile() will return true if a new file is created
+            if (salesData.createNewFile()){
+                System.out.println("File created: " + salesData.getName());
+            } else{
+                System.out.println("File already exists");
+            }
+        } catch (IOException e){
+            System.out.println("An Error occurred! --> " + e);
+        }
+    }
+}
+
+class WriteToFile{
+    public WriteToFile(ArrayList<Object> order){
+        // Create a try catch block, with a catch parameter of IOException e
+        try{
+            // Create a new FileWriter object named fw = new FileWriter with
+            // parameter object "salesData.txt", and the boolean true (an option that
+            // allows for appending to the file)
+            FileWriter fw = new FileWriter("salesData.text", true);
+            //Create a new PrintWriter object, salesWriter = new PrintWriter object whose
+            // constructor parameter is the FileWriter object fw created previously
+            PrintWriter salesWriter = new PrintWriter(fw);
+            // Print each value in the Object instance, order
+            for (int i=0; i< order.size(); i++){
+                salesWriter.println(order.get(i));
+            }
+            // Stop the writer from continuing to run
+            salesWriter.close();
+            System.out.println("Successfully wrote to the file");
+        } catch (IOException e){
+            System.out.println("An error occurred!");
         }
     }
 }

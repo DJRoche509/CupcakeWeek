@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62de5bff-7e98-424c-ab0d-7a624f5915e6" name="Changes" comment="Implement File object creation/manipulation using for-loop &amp; conditional statements">
+    <list default="true" id="62de5bff-7e98-424c-ab0d-7a624f5915e6" name="Changes" comment="Adding classes files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +28,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -121,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686367596158</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updating">
+      <created>1686457372119</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686457372120</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adding classes files">
+      <created>1686457420722</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686457420722</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +160,8 @@
     <MESSAGE value="Invoke Order() object with cupcakeMenu &amp; drinkMenu" />
     <MESSAGE value="Implement Arraylist objects &amp; conditional statements" />
     <MESSAGE value="Implement File object creation/manipulation using for-loop &amp; conditional statements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement File object creation/manipulation using for-loop &amp; conditional statements" />
+    <MESSAGE value="Updating" />
+    <MESSAGE value="Adding classes files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding classes files" />
   </component>
 </project>

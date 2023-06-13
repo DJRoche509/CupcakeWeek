@@ -42,7 +42,7 @@ public class Main {
 
 
         /*   redVelvet   */
-       System.out.println("We are deciding on the price for our red velvet cupcake. Here is the description:");
+        System.out.println("We are deciding on the price for our red velvet cupcake. Here is the description:");
 
         // Invoke cupcake.type()
         redVelvet.type();
@@ -64,7 +64,7 @@ public class Main {
 
         System.out.println("How much would you like to charge for the chocolate cupcake? \n(Input a numerical number taken to 2 decimal places)");
         // Get user's input for price to be charged
-       priceText = input.nextLine();
+        priceText = input.nextLine();
         // Convert priceText to the double variable, price
         price = Double.parseDouble(priceText);
         // Set price for the chocolate cupcake
@@ -75,13 +75,6 @@ public class Main {
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
 
-        // Add each drink objects to the drinkMenu arrayList
-        drinkMenu.add(water);
-        drinkMenu.add(soda);
-        drinkMenu.add(milk);
-
-        // Call the Order constructor and pass in cupcakeMenu and drinkMenu as parameters
-        new Order(cupcakeMenu, drinkMenu);
 
         /*   Water  */
         System.out.println("We are in the middle of creating the drink menu. We currently have three drinks on the menu but we need to decide on pricing.");
@@ -131,7 +124,14 @@ public class Main {
         // Invoke cupcake instance object to set the price by passing "price" as parameter
         milk.setPrice(price) ;
 
-        //
+        // Add each drink objects to the drinkMenu arrayList
+        drinkMenu.add(water);
+        drinkMenu.add(soda);
+        drinkMenu.add(milk);
+
+
+        // Call the Order constructor and pass in cupcakeMenu and drinkMenu as parameters
+        new Order(cupcakeMenu, drinkMenu);
     }
 }
 

@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Order {
@@ -87,22 +86,22 @@ public class Order {
                 order.add(cupcakeMenu.get(2));
                 System.out.println("Item successfully added to order");
             } else if (orderChoice == 4) {
-                order.add(cupcakeMenu.get(3));
+                order.add(drinkMenu.get(0));
                 System.out.println("Item successfully added to order");
             } else if (orderChoice == 5) {
-                order.add(cupcakeMenu.get(4));
+                order.add(drinkMenu.get(1));
                 System.out.println("Item successfully added to order");
             } else if (orderChoice == 6) {
-                order.add(cupcakeMenu.get(5));
+                order.add(drinkMenu.get(2));
                 System.out.println("Item successfully added to order");
             }  else {
                 System.out.println("Sorry, we don't seem to have that on the menu.");
             }
 
             System.out.println("Would you like to continue ordering? (Y/N)");
-            placeOrder = scan.nextLine();
+            String continueOrder = scan.nextLine();
             // if statement that checks if placeOrder does NOT equal Y
-            if (!placeOrder.equalsIgnoreCase("y")) {
+            if (!continueOrder.equalsIgnoreCase("y")) {
                 ordering = false;
             }
         }
@@ -143,7 +142,8 @@ public class Order {
             }
         }
         // Print The subtotal
-        System.out.println(subtotal);
+        System.out.println("Subtotal: $"+subtotal);
+        System.out.println("Total: $"+ Math.round(subtotal*(1+.065)*100.0)/100.0 + " (6.5% tax included)");
 
         //Create a new CreateFile()
         new CreateFile();
@@ -178,7 +178,7 @@ class WriteToFile{
             // Create a new FileWriter object named fw = new FileWriter with
             // parameter object "salesData.txt", and the boolean true (an option that
             // allows for appending to the file)
-            FileWriter fw = new FileWriter("salesData.text", true);
+            FileWriter fw = new FileWriter("salesData.txt", true);
             //Create a new PrintWriter object, salesWriter = new PrintWriter object whose
             // constructor parameter is the FileWriter object fw created previously
             PrintWriter salesWriter = new PrintWriter(fw);
@@ -186,6 +186,8 @@ class WriteToFile{
             for (int i=0; i< order.size(); i++){
                 salesWriter.println(order.get(i));
             }
+            // Add line and LineSpace between the printWriting
+            salesWriter.println("-".repeat(30)+"\n");
             // Stop the writer from continuing to run
             salesWriter.close();
             System.out.println("Successfully wrote to the file");
